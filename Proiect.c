@@ -415,18 +415,21 @@ int citire_tasta()
 	//functia citeste pana cand utilizatorul returneaza un int!=0
 	int tasta=0;
 	char sir[5];
+	int ok=0;
+	printf("Introduceti o tasta\n");
 	while(tasta==0)//putem pune aceasta conditie deoarece nu avem tasta 0 in meniu
 	{
-		printf("Introduceti o tasta\n");
 		if(fgets(sir,sizeof(sir),stdin)!=NULL)//verifica daca inputul depaseste limita declarata a variabilei sir
 		{
 			if(sscanf(sir,"%d",&tasta)==1)//se verifica daca se poate converti sirul in int
 				break;
-			else 
-				printf("Tasta invalida\n");
+			else
+				if(ok==1) 
+					printf("Tasta invalida,introduceti o tasta valida:\n");
 		}
 		else 
-		   printf("Tasta invalida,va rugam introduceti o tasta valida\n");
+		   printf("Tasta invalida,va rugam introduceti o tasta valida:\n");
+		ok=1;
 	}
 	return tasta;
 }
