@@ -409,37 +409,7 @@ void toate_testele()
 	test_calculeaza_balanta();
 	printf("\n***toate testele au trecut cu succes!***\n\n\n");
 }
-/*
-int citire_op()
-{
-    int o=0;
-    char sir[5];
-    int ok=0;
-    while (o==0)
-    {
-        printf("Introduceti o tasta\n");
-        if (fgets(sir, sizeof(sir), stdin) != NULL)//verifica daca inputul depaseste limita declarata a variabilei sir
-        {
-            if (sscanf(sir, "%d", &o) == 1)//se verifica daca se poate converti sirul in int
-            {
-                o=o;
-                //op=1;
-                break;
-            }
-            else
-            {
-                printf("Tasta invalida.\n");
-                o = 0;
-            }
-        }
-        else
-        {
-            printf("Tasta invalida, va rugam introduceti o tasta valida\n");
-            o=0;
-        }
-    }
-    return o;
-}*/
+
 int citire_tasta()
 {
 	//functia citeste pana cand utilizatorul returneaza un int!=0
